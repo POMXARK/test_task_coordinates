@@ -15,3 +15,17 @@
 Если будет время, можно усложнить задание условием: если ранее были запрошены близкие **координаты < 5 метров**, то
 заново
 адрес не запрашивать, а использовать полученный ранее. Выполнить документацию API в формате **Swagger**.
+
+
+
+### Запуск
+- cp .env.example .env
+- php php composer_2.phar update
+- npm i
+
+### demo-deploy (all in one)
+- sudo rm -r docker
+- php artisan passport:keys
+- php artisan optimize
+- docker build -t test_task_coordinates .
+- docker run -d -p 8000:80 --name test_task_coordinates test_task_coordinates
