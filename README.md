@@ -25,7 +25,6 @@
 
 ### demo-deploy (all in one)
 - sudo rm -r docker
-- php artisan passport:keys
 - php artisan optimize
 - docker build -t test_task_coordinates .
 - docker run -d -p 8000:80 --name test_task_coordinates test_task_coordinates
